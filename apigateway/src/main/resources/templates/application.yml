@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: CandidatService
+          uri: http://localhost:8081
+          predicates:
+            - Path=/candidat
+        - id: TestService
+          uri: http://localhost:8086
+          predicates:
+            - Path=/tests/**
+        - id: LevelService
+          uri: http://localhost:8083
+          predicates:
+            - Path=/level/**
+        - id: RoleService
+          uri: http://localhost:8084
+          predicates:
+            - Path=/role/**
+        - id: ThemeService
+          uri: http://localhost:8085
+          predicates:
+            - Path=/theme/**
+
+
