@@ -1,4 +1,4 @@
-package com.example.CompetenceService.dto;
+package com.example.demo.dto;
 
 public class CompetenceDTO {
     private Long id;
@@ -9,7 +9,6 @@ public class CompetenceDTO {
     public CompetenceDTO() {
     }
 
-  
 
     public CompetenceDTO(Long id, String name, Long roleId, Long levelId) {
         this.id = id;

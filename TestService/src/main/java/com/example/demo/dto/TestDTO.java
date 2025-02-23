@@ -5,20 +5,27 @@ import java.util.List;
 public class TestDTO {
     private Long id;
     private String name;
-    private List<CandidatDTO> candidates;
+    private List<CandidatDTO> candidats;
     private RoleDTO role;
     private LevelDTO level;
+    private List<CompetenceDTO> competences;
 
     public TestDTO() {
     }
 
-    public TestDTO(Long id, String name, List<CandidatDTO> candidates, RoleDTO role, LevelDTO level) {
+   
+
+    public TestDTO(Long id, String name, List<CandidatDTO> candidats, RoleDTO role, LevelDTO level,
+            List<CompetenceDTO> competences) {
         this.id = id;
         this.name = name;
-        this.candidates = candidates;
+        this.candidats = candidats;
         this.role = role;
         this.level = level;
+        this.competences = competences;
     }
+
+
 
     public Long getId() {
         return id;
@@ -36,12 +43,12 @@ public class TestDTO {
         this.name = name;
     }
 
-    public List<CandidatDTO> getCandidates() {
-        return candidates;
+    public List<CandidatDTO> getCandidats() {
+        return candidats;
     }
 
-    public void setCandidates(List<CandidatDTO> candidates) {
-        this.candidates = candidates;
+    public void setCandidats(List<CandidatDTO> candidats) {
+        this.candidats = candidats;
     }
 
     public RoleDTO getRole() {
@@ -58,6 +65,18 @@ public class TestDTO {
 
     public void setLevel(LevelDTO level) {
         this.level = level;
+    }
+
+
+
+    public List<CompetenceDTO> getCompetences() {
+        return competences;
+    }
+
+
+
+    public void setCompetences(List<CompetenceDTO> competences) {
+        this.competences = competences;
     }
 
 }
