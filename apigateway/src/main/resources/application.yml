@@ -41,3 +41,11 @@ spring:
           uri: http://localhost:8089
           predicates:
             - Path=/competences/**
+        - id: QuestionService
+          uri: http://localhost:8090
+          predicates:
+            - Path=/question/**
+        - id: AnswerService
+          uri: http://localhost:8091
+          predicates:
+            - Path=/answer/**
