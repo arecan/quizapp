@@ -11,7 +11,7 @@ import com.example.QuestionService.dto.QuestionDTO;
 import com.example.QuestionService.service.QuestionService;
 
 @RestController
-@RequestMapping("question")
+@RequestMapping("/question")
 public class QuestionController {
     @Autowired QuestionService questionService;
 
