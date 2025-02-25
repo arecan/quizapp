@@ -1,7 +1,6 @@
 package com.example.answer.controller;
 
 import com.example.answer.dto.AnswerDTO;
-import com.example.answer.model.Answer;
 import com.example.answer.service.AnswerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

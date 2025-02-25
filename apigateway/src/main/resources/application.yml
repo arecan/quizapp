@@ -10,11 +10,11 @@ spring:
     gateway:
       routes:
         - id: CandidatService
-          uri: http://localhost:8081
+          uri: http://localhost:8071
           predicates:
             - Path=/candidat/**
         - id: TestService
-          uri: http://localhost:8080
+          uri: http://localhost:8070
           predicates:
             - Path=/tests/**
         - id: LevelService
@@ -49,3 +49,12 @@ spring:
           uri: http://localhost:8091
           predicates:
             - Path=/answer/**
+        - id: emailing
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/email/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
