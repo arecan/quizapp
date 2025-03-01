@@ -15,7 +15,7 @@ public class TestController {
     @Autowired
     private TestService testService;
 
-    @PostMapping
+    @PostMapping("/addTest")
     public ResponseEntity<TestDTO> createTest(@RequestBody TestDTO testDTO) {
         return ResponseEntity.ok(testService.createTest(testDTO));
     }

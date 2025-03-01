@@ -9,21 +9,29 @@ public class TestDTO {
     private RoleDTO role;
     private LevelDTO level;
     private List<CompetenceDTO> competences;
+    private List<QuestionDTO> questions;
 
     public TestDTO() {
     }
 
    
 
+
+
+
     public TestDTO(Long id, String name, List<CandidatDTO> candidats, RoleDTO role, LevelDTO level,
-            List<CompetenceDTO> competences) {
+            List<CompetenceDTO> competences, List<QuestionDTO> questions) {
         this.id = id;
         this.name = name;
         this.candidats = candidats;
         this.role = role;
         this.level = level;
         this.competences = competences;
+        this.questions = questions;
     }
+
+
+
 
 
 
@@ -77,6 +85,24 @@ public class TestDTO {
 
     public void setCompetences(List<CompetenceDTO> competences) {
         this.competences = competences;
+    }
+
+
+
+
+
+
+    public List<QuestionDTO> getQuestions() {
+        return questions;
+    }
+
+
+
+
+
+
+    public void setQuestions(List<QuestionDTO> questions) {
+        this.questions = questions;
     }
 
 }

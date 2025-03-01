@@ -17,6 +17,9 @@ public class Test {
     @ElementCollection
     private List<Long> competenceIds;
 
+    @ElementCollection
+    private List<Long> questionIds;
+
     private Long roleId;
     private Long levelId;
 
@@ -69,16 +72,28 @@ public class Test {
         this.levelId = levelId;
     }
     
-    public Test(Long id, String name, List<Long> candidateIds, List<Long> competenceIds, Long roleId, Long levelId) {
+   
+
+    public Test(Long id, String name, List<Long> candidateIds, List<Long> competenceIds, List<Long> questionIds,
+            Long roleId, Long levelId) {
         this.id = id;
         this.name = name;
         this.candidateIds = candidateIds;
         this.competenceIds = competenceIds;
+        this.questionIds = questionIds;
         this.roleId = roleId;
         this.levelId = levelId;
     }
 
     public Test() {
+    }
+
+    public List<Long> getQuestionIds() {
+        return questionIds;
+    }
+
+    public void setQuestionIds(List<Long> questionIds) {
+        this.questionIds = questionIds;
     }
     
 }
