@@ -22,7 +22,7 @@ public class CompetenceController {
 
     @GetMapping("/role/{roleId}/level/{levelId}")
     public List<CompetenceDTO> getCompetencesByRoleAndLevel(
-            @PathVariable Long roleId, @PathVariable Long levelId) {
+@PathVariable Long roleId, @PathVariable Long levelId) {
         return competenceService.getCompetencesByRoleAndLevel(roleId, levelId);
     }
 
