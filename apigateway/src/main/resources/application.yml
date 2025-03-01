@@ -8,6 +8,13 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      globalcors:  # 🔥 Configuration CORS ajoutée ici
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods: "GET, POST, PUT, DELETE, OPTIONS"
+            allowedHeaders: "*"
+            allowCredentials: true
       routes:
         - id: CandidatService
           uri: http://localhost:8071
@@ -36,7 +43,7 @@ spring:
         - id: Authentification
           uri: http://localhost:8088
           predicates:
-            - Path=/api/**
+            - Path=/api/auth/**  # 🔥 Correction pour éviter que toutes les requêtes /api/** aillent sur Auth
         - id: CompetenceService
           uri: http://localhost:8089
           predicates:
@@ -53,8 +60,3 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/email/**
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-
