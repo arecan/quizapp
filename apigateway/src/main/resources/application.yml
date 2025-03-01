@@ -53,8 +53,4 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/email/**
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
 
