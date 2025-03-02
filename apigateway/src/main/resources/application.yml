@@ -77,7 +77,3 @@ management:
       enabled: true  # Readiness probe
   server:
     port: 8099  # Actuator runs on a separate port
-<<<<<<< HEAD
-=======
-
->>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
