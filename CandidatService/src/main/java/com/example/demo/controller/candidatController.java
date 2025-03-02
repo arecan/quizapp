@@ -19,7 +19,6 @@ import com.example.demo.dto.CandidatDTO;
 import com.example.demo.model.Candidat;
 import com.example.demo.service.CandidatService;
 
-
 @RestController
 @RequestMapping("/candidat")
 public class candidatController {
@@ -42,6 +41,10 @@ public class candidatController {
     public ResponseEntity<CandidatDTO> getCandidatById(@PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(candidatService.getCandidatById(id));
     }
-    
+
+    @GetMapping("/test/{testId}")
+    public ResponseEntity<List<CandidatDTO>> getCandidatsByTestId(@PathVariable Long testId) {
+        return ResponseEntity.ok(candidatService.getCandidatesByTestId(testId));
+    }
 
 }
