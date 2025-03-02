@@ -101,7 +101,6 @@ public List<TestDTO> getAllTests() {
             .collect(Collectors.toList());
 }
 
-
     public TestDTO getTestById(Long testId) {
         return testRepository.findById(testId)
                 .map(test -> {
