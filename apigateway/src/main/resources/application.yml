@@ -60,3 +60,20 @@ spring:
           uri: http://localhost:8080
           predicates:
             - Path=/api/email/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Restrict exposure for security
+  endpoint:
+    health:
+      show-details: always  # Show details in health check
+  metrics:
+    enabled: true  # Enable metrics for monitoring
+  health:
+    livenessstate:
+      enabled: true  # Liveness probe
+    readinessstate:
+      enabled: true  # Readiness probe
+  server:
+    port: 8099  # Actuator runs on a separate port
