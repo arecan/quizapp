@@ -14,11 +14,14 @@ public class TestDTO {
     public TestDTO() {
     }
 
+<<<<<<< HEAD
    
 
 
 
 
+=======
+>>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
     public TestDTO(Long id, String name, List<CandidatDTO> candidats, RoleDTO role, LevelDTO level,
             List<CompetenceDTO> competences, List<QuestionDTO> questions) {
         this.id = id;
@@ -30,11 +33,14 @@ public class TestDTO {
         this.questions = questions;
     }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
     public Long getId() {
         return id;
     }
@@ -75,32 +81,34 @@ public class TestDTO {
         this.level = level;
     }
 
-
-
     public List<CompetenceDTO> getCompetences() {
         return competences;
     }
-
-
 
     public void setCompetences(List<CompetenceDTO> competences) {
         this.competences = competences;
     }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
     public List<QuestionDTO> getQuestions() {
         return questions;
     }
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
     public void setQuestions(List<QuestionDTO> questions) {
         this.questions = questions;
     }

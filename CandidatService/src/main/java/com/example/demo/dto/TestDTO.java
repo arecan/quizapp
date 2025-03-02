@@ -1,23 +1,25 @@
-package com.example.demo.model;
+package com.example.demo.dto;
+
 import java.util.List;
 
-
-import jakarta.persistence.*;
-
-@Entity
-public class Test {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class TestDTO {
     private Long id;
     private String name;
-
-    @ElementCollection
-    private List<Long> candidateIds;
-
+    private List<CandidatDTO> candidats;
     private Long roleId;
     private Long levelId;
 
-    // Getters et Setters
+    public TestDTO() {
+    }
+
+    public TestDTO(Long id, String name, List<CandidatDTO> candidats, Long roleId, Long levelId) {
+        this.id = id;
+        this.name = name;
+        this.candidats = candidats;
+        this.roleId = roleId;
+        this.levelId = levelId;
+    }
+
     public Long getId() {
         return id;
     }
@@ -32,14 +34,6 @@ public class Test {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<Long> getCandidateIds() {
-        return candidateIds;
-    }
-
-    public void setCandidateIds(List<Long> candidateIds) {
-        this.candidateIds = candidateIds;
     }
 
     public Long getRoleId() {
@@ -57,5 +51,12 @@ public class Test {
     public void setLevelId(Long levelId) {
         this.levelId = levelId;
     }
-    
+
+    public List<CandidatDTO> getCandidats() {
+        return candidats;
+    }
+
+    public void setCandidats(List<CandidatDTO> candidats) {
+        this.candidats = candidats;
+    }
 }

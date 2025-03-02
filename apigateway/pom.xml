@@ -33,6 +33,7 @@
 	<dependencies>
 
 		<dependency>
+<<<<<<< HEAD
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 			<version>4.2.0</version>
@@ -40,6 +41,8 @@
 
 
 		<dependency>
+=======
+>>>>>>> 35fcf03ccf4ba57531b0af2630d049d33992dec0
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>3.4.3</version>

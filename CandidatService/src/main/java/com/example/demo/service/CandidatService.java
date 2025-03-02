@@ -10,4 +10,5 @@ public interface CandidatService {
     List<Candidat> getAllCandidat();
     CandidatDTO addCandidat(CandidatDTO candidateDTO);
     CandidatDTO getCandidatById(Long id);
+    List<CandidatDTO> getCandidatesByTestId(Long testId);
 }
