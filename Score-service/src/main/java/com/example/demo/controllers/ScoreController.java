@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.dto.ScoreDTO;
-import com.example.demo.dto.TestDTO;
 import com.example.demo.model.Score;
 import com.example.demo.service.ScoreService;
 
@@ -21,13 +20,7 @@ public class ScoreController {
 
     @PostMapping("/saveScore")
     public ResponseEntity<Score> saveScore(@RequestBody ScoreDTO scoreDTO) {
-        Score score = scoreService.saveScore(
-            scoreDTO.getTestId(),
-            scoreDTO.getCandidatId(),
-            scoreDTO.getCorrectAnswers(),
-            scoreDTO.getTotalQuestions()
-        );
-        
+        Score score = scoreService.saveScore(scoreDTO);
         return ResponseEntity.ok(score);
     }
     
@@ -41,6 +34,12 @@ public class ScoreController {
             return ResponseEntity.notFound().build();
         }
     }
+    @GetMapping("/test/{selectedTest}/results")
+    public ResponseEntity<List<ScoreDTO>> getScoresWithCandidatsByTest(@PathVariable Long selectedTest) {
+        List<ScoreDTO> scores = scoreService.getScoresWithCandidatsByTest(selectedTest);
+        return ResponseEntity.ok(scores);
+    }
+    
 
 
 

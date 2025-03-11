@@ -2,27 +2,39 @@ package com.example.demo.dto;
 
 import java.util.List;
 
+
 public class TestDTO {
     private Long id;
     private String name;
     private List<CandidatDTO> candidats;
     private RoleDTO role;
     private LevelDTO level;
+    private ThemeDTO theme;
+    private AdministrateurDTO admin;
     private List<CompetenceDTO> competences;
     private List<QuestionDTO> questions;
 
     public TestDTO() {
     }
-    public TestDTO(Long id, String name, List<CandidatDTO> candidats, RoleDTO role, LevelDTO level,
-            List<CompetenceDTO> competences, List<QuestionDTO> questions) {
+    
+
+
+    public TestDTO(Long id, String name, List<CandidatDTO> candidats, RoleDTO role, LevelDTO level, ThemeDTO theme,
+            AdministrateurDTO admin, List<CompetenceDTO> competences, List<QuestionDTO> questions) {
         this.id = id;
         this.name = name;
         this.candidats = candidats;
         this.role = role;
         this.level = level;
+        this.theme = theme;
+        this.admin = admin;
         this.competences = competences;
         this.questions = questions;
     }
+
+
+
+
 
     public Long getId() {
         return id;
@@ -41,7 +53,7 @@ public class TestDTO {
     }
 
     public List<CandidatDTO> getCandidats() {
-        return candidats;
+        return candidats != null ? candidats : List.of(); // Évite le NullPointerException
     }
 
     public void setCandidats(List<CandidatDTO> candidats) {
@@ -79,5 +91,33 @@ public class TestDTO {
     public void setQuestions(List<QuestionDTO> questions) {
         this.questions = questions;
     }
+
+
+    public AdministrateurDTO getAdmin() {
+        return admin;
+    }
+
+
+    public void setAdmin(AdministrateurDTO admin) {
+        this.admin = admin;
+    }
+
+
+
+
+
+    public ThemeDTO getTheme() {
+        return theme;
+    }
+
+
+
+
+
+    public void setTheme(ThemeDTO theme) {
+        this.theme = theme;
+    }
+
+    
 
 }

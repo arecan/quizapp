@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.demo.dto.CandidatDTO;
 
-@FeignClient(name = "CandidatService", url = "http://localhost:8071")
+@FeignClient(name = "CandidatService")
 public interface CandidatClient {
 
     @GetMapping("/candidat/{id}")
@@ -16,6 +16,7 @@ public interface CandidatClient {
 
     @PostMapping("/candidat")
     CandidatDTO addCandidate(@RequestBody CandidatDTO CandidatDTO);
-    
-    
+
+    @GetMapping("/candidat/email/{email}")
+    CandidatDTO getCandidatByEmail(@PathVariable String email);
 }
